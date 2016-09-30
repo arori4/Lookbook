@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--created by Yuanmin Zhang on May16,2016-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <!--closet icon set-->
+        <LinearLayout
+            android:id="@+id/bottom_bar_closet_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?color1"
+            android:orientation="vertical"
+            android:padding="3dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/closet"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/closetTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/closet"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textIsSelectable="false"
+                android:typeface="serif"
+                android:textSize="@dimen/abc_action_bar_content_inset_material" />
+        </LinearLayout>
+
+        <!--outfit generator icon set -->
+        <LinearLayout
+            android:id="@+id/bottom_bar_outfit_generator_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?color2"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/outfitgen"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/outfitgenTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/outfit_creator"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:typeface="serif"
+                android:textSize="@dimen/abc_action_bar_content_inset_material" />
+
+        </LinearLayout>
+
+        <!--lookbook icon set -->
+        <LinearLayout
+            android:id="@+id/bottom_bar_lookbook_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?color3"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/lookbook"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/lookbookTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lookbook"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:typeface="serif"
+                android:textSize="@dimen/abc_action_bar_content_inset_material" />
+
+        </LinearLayout>
+
+        <!--More icon set-->
+        <LinearLayout
+            android:id="@+id/bottom_bar_more_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?color4"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/more"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/washing_machine"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/moreTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Laundry"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:typeface="serif"
+                android:textSize="@dimen/abc_action_bar_content_inset_material" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

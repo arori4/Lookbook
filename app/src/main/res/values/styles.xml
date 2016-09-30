@@ -1,0 +1,74 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- no action bar-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/background_material_light_closet</item>
+        <item name="android:textColor">@android:color/black</item>
+
+        <item name="color1">@color/blue</item>
+        <item name="color2">@color/pink</item>
+        <item name="color3">@color/darkerblue</item>
+        <item name="color4">@color/yellow</item>
+    </style>
+
+    <style name="EcoTheme" parent="AppTheme">
+        <item name="colorPrimary">#3a2215</item>
+        <item name="colorPrimaryDark">#291810</item>
+        <item name="colorAccent">#466b03</item>
+
+        <item name="color1">@color/ecoButtons</item>
+        <item name="color2">@color/ecoButtons</item>
+        <item name="color3">@color/ecoButtons</item>
+        <item name="color4">@color/ecoButtons</item>
+    </style>
+
+    <style name="DynamicTheme" parent="AppTheme">
+        <item name="colorPrimary">#00a5f7</item>
+        <item name="colorPrimaryDark">#0084f7</item>
+        <item name="colorAccent">#f45a00</item>
+
+        <item name="color1">@color/dynamicButtons</item>
+        <item name="color2">@color/dynamicButtons</item>
+        <item name="color3">@color/dynamicButtons</item>
+        <item name="color4">@color/dynamicButtons</item>
+
+    </style>
+
+    <style name="MonochromeTheme" parent="AppTheme">
+        <item name="colorPrimary">#262424</item>
+        <item name="colorPrimaryDark">#0e0d0d</item>
+        <item name="colorAccent">#bbb9b3</item>
+
+        <item name="color1">@color/monochromeButtons</item>
+        <item name="color2">@color/monochromeButtons</item>
+        <item name="color3">@color/monochromeButtons</item>
+        <item name="color4">@color/monochromeButtons</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ClosetAppTheme" parent="AppTheme" >
+        <item name="android:colorBackground">@color/background_material_light_closet</item>
+    </style>
+    <style name="PhotoGridLayout">
+        <item name="android:drawSelectorOnTop">true</item>
+        <item name="android:listSelector">@drawable/photogrid_list_selector</item>
+    categoryGridLayout</style>
+
+
+</resources>

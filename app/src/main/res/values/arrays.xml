@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_themes_list_titles">
+        <item>App Theme</item>
+        <item>Eco</item>
+        <item>Dynamic</item>
+        <item>Monochrome</item>
+    </string-array>
+
+    <string-array name="pref_themes_list_values">
+        <item>App Theme</item>
+        <item>Eco</item>
+        <item>Dynamic</item>
+        <item>Monochrome</item>
+    </string-array>
+
+    <string-array name="pref_categories_list_titles">
+        <item>Tops</item>
+        <item>Bottoms</item>
+        <item>Accessories</item>
+        <item>Shoes</item>
+        <item>Body</item>
+        <item>Hats</item>
+        <item>Jackets</item>
+    </string-array>
+
+    <string-array name="pref_categories_list_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+</resources>

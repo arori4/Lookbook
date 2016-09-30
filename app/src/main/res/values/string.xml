@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">iCloset</string>
+
+    <string name="facebook_app_id">1773229412963460</string>
+
+    <string name="action_settings">Preferences</string>
+    <string name="category">Category: </string>
+    <string name="style">Style: </string>
+    <string name="weather">Weather: </string>
+    <string name="occasion">Occasion: </string>
+    <string name="color">Color: </string>
+    <string name="tags">Tags: </string>
+    <string name="notes">Notes: </string>
+
+    <!-- bottom bar -->
+    <string name="closet">Closet</string>
+    <string name="outfit_creator">Stylist</string>
+    <string name="lookbook">Lookbook</string>
+    <string name="more">More</string>
+
+    <string name="icloset">iCloset</string>
+
+    <string name="closet_activity_name">Closet</string>
+    <string name="lookbook_activity_name">Lookbook</string>
+    <string name="create_an_outfit_activity_name">Create an Outfit</string>
+    <string name="doneButtonText">done</string>
+    <string name="choose_for_me_button_text">Choose for me</string>
+    <string name="no_elements_default_text">no elements default text</string>
+    <string name="lookbook_no_elements_text">You seem to not have any outfits saved. Create an outfit and save it to use it later.</string>
+
+    <string name="closet_no_elements_text">You seem to not have entered in any clothes. Please add some to use the app.</string>
+
+    <!-- login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in_short">sign in</string>
+    <string name="action_sign_in">Sign In</string>
+
+    <!-- welcome message -->
+    <string name="about_iCloset">iCloset app allows you to input clothing items from your physical closet into a virtual iCloset. Your virtual iCloset allows you to keep track of clothing items by category and manipulate them based on their current states (dirty, shared, lost). </string>
+    <string name="about_OutfitGen">The Outfit Generator allows you to randomly or manually generate outfits based on current preferences for weather and occasion.</string>
+
+    <string name="pref_default_display_name">92092</string>
+
+    <string name="clothing_image_fragment_text">clothing image</string>
+    <string name="closet_button_picture_description">closet_button_picture</string>
+    <string name="stylist_button_picture_description">stylist button picture</string>
+    <string name="lookbook_button_picture_description">lookbook button picture</string>
+    <string name="more_button_picture_description">more button picture</string>
+    <string name="login_broken_text">Login is broken, just login</string>
+    <string name="top_image_description">Top Image</string>
+    <string name="shirt_top_image_description">Shirt/Top</string>
+    <string name="pants_bottom_image_description">Pants/Bottom</string>
+    <string name="shoes_image_description">Shoes Image</string>
+    <string name="outfit_fragment_stack_object_image_description">outfit fragment stack object image</string>
+    <string name="save_outfit_to_lookbook_toast_text">Saving outfit to Lookbook.</string>
+    <string name="already_saved_outfit_toast_text">You have already saved this outfit.</string>
+    <string name="not_created_outfit_toast_text">You have not yet created an outfit.</string>
+    <string name="do_laundry_text">Do Laundry!</string>
+    <string name="laundry_button_image_description">laundry_button_image</string>
+    <string name="accessory_button_description">accessory button_description</string>
+    <string name="welcome_message">Keep track of your clothing items and generate outfits with our virtual iCloset!</string>
+</resources>

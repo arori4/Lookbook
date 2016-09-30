@@ -1,0 +1,17 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Application Settings" >
+    <ListPreference
+        android:key="theme"
+        android:title="Select Theme "
+        android:entries="@array/pref_themes_list_titles"
+        android:entryValues="@array/pref_themes_list_values"
+        />
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

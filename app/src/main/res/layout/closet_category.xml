@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/closet_category_viewgroup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/closet_category_viewgroup_horiz"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <!--side category indicator modified by Yuanmin Zhang on May 25th-->
+
+        <LinearLayout
+            android:id="@+id/closet_category_left_layout"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@color/material_grey_300"
+            android:orientation="vertical"
+            android:padding="3dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/closet_category_picture"
+                android:scaleType="fitCenter"
+                android:padding="3dp"
+                android:contentDescription="@string/closet_category_image_view_description"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/closet_category_text"
+                android:background="@android:color/transparent"
+                android:textAlignment="center"
+                android:text="@string/closet_category_text_view_default_text"
+                android:textColor="@android:color/black"
+                android:textIsSelectable="false"
+                android:typeface="serif"/>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/closet_category_clothing_slider"
+            style="@style/PhotoGridLayout"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/closet_category_clothing_slider_layout"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDivider"/>
+
+</LinearLayout>

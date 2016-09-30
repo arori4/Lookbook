@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="outfitgenimagebutton">outfitGenImageButton</string>
+    <string name="shirt_button_description">shirt button description</string>
+    <string name="pants_button_description">pants button description</string>
+    <string name="shoe_button_description">shoe button description</string>
+    <string name="dress_button_description">dress button description</string>
+    <string name="jacket_button_description">jacket button description</string>
+    <string name="hat_button_description">hat button description</string>
+    <string name="select_clothing_type_string">Select Clothing Type</string>
+    <string name="save_outfit_text">Save Outfit</string>
+    <string name="generate_outfit_text">Generate</string>
+    <string name="im_feeling_lucky_text">I\'m Feeling Lucky</string>
+    <string name="default_outfit_nam">Outfit Name</string>
+    <string name="wear_outfit_button_text">Wear Outfit</string>
+    <string name="no_laundry_text">There seems to be no laundry here.</string>
+    <string name="closet_category_image_view_description">closet category image view description</string>
+    <string name="closet_category_text_view_default_text">picture goes here</string>
+    <string name="add_clothing_image_dialog_description">add clothing image dialog description</string>
+    <string name="view_clothing_by_category_no_matches">No clothing matches the query set.</string>
+</resources>

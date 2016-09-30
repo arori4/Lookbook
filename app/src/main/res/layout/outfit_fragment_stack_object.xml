@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This object is added into the stack views in outfit_fragment.xml -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/outfit_fragment_stack_object_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/nylon_jacket"
+        android:contentDescription="@string/outfit_fragment_stack_object_image_description"/>
+
+</FrameLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is added to the lookbook view adapter. -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    android:background="@android:color/transparent"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AACCCCCC"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/default_outfit_nam"
+                android:id="@+id/outfit_fragment_outfit_name"
+                android:layout_gravity="end|top"
+                android:background="@android:color/white"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wear_outfit_button_text"
+                android:background="@color/yellow"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:id="@+id/wear_outfit_button"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/outfit_fragment_accessories_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.5"
+            android:contentDescription="@string/top_image_description"
+            android:cropToPadding="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cap"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9">
+
+            <com.segfault.closetmanager.Lookbook.ClothingStackLayout
+                android:id="@+id/shirt_clothing_stack_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/nylon_jacket"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9">
+
+            <com.segfault.closetmanager.Lookbook.ClothingStackLayout
+                android:id="@+id/pants_clothing_stack_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/nylon_jacket"/>
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/outfit_fragment_shoes_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.3"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/shoes_image_description"
+            android:cropToPadding="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sneaker"/>
+
+    </LinearLayout>
+
+</FrameLayout>

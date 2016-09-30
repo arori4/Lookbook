@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Defines a small piece of clothing to view-->
+<com.segfault.closetmanager.Closet.ClickableFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:adjustViewBounds="true"
+    android:padding="2dp"
+    android:scaleType="fitCenter"
+    android:id="@+id/clothing_frame_layout"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/clothing_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/clothing_image_fragment_text"
+        android:clickable="true">
+    </ImageView>
+
+</com.segfault.closetmanager.Closet.ClickableFrameLayout>

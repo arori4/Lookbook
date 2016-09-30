@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal">
+    <!--washing icon set-->
+    <LinearLayout
+        android:id="@+id/laundry_washing_button"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:background="@color/grey_blue"
+        android:orientation="vertical"
+        android:padding="3dp"
+        android:visibility="visible"
+        android:layout_gravity="center_horizontal|right">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/washing_machine"
+            android:padding="@dimen/abc_action_bar_overflow_padding_start_material"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/do_laundry_button"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background="@android:color/transparent"
+            android:text="Laundry"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="false"
+            android:typeface="monospace"
+            android:textSize="@dimen/abc_text_size_large_material"
+            android:layout_weight="0.12" />
+    </LinearLayout>
+
+    <!--preferences icon set-->
+    <LinearLayout
+        android:id="@+id/more_page_preferences_button"
+
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:background="@color/watermelon_pink"
+        android:orientation="vertical"
+        android:padding="3dp"
+        android:visibility="visible"
+        android:layout_gravity="center_horizontal|right">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/preferences"
+            android:padding="@dimen/abc_action_bar_overflow_padding_start_material"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/preferences_button"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background="@android:color/transparent"
+            android:text="Preferences"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="false"
+            android:typeface="monospace"
+            android:textSize="@dimen/abc_text_size_large_material"
+            android:layout_weight="0.12" />
+    </LinearLayout>
+    </LinearLayout>
+    <include
+        android:id="@+id/outfit_gen_bottom_bar"
+        layout="@layout/bottom_bar"
+
+        android:layout_width="match_parent"
+        android:layout_height="@+dimen/bottom_bar_height" />
+
+</LinearLayout>

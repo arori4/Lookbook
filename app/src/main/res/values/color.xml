@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#219083</color>
+    <color name="colorPrimaryDark">#218790</color>
+    <color name="colorAccent">#ff80ab</color>
+
+    <!-- bottom bar buttons -->
+    <color name="colorButtonCloset">#F5FAFA</color>
+    <color name="colorButtonOutfitGen">#acd1e9</color>
+    <color name="colorButtonLookbook">#6D929B</color>
+    <color name="colorButtonMore">#e8d0a9</color>
+    <color name="grid_state_pressed">#1Affffff</color>
+    <color name="grid_state_focused">#80000000</color>
+
+    <color name="background_material_light_closet">#ffffff</color>
+
+    <color name="pink">#ffecee</color>
+    <color name="darkerblue">#cbe6fb</color>
+    <color name="blue">#cbf3f2</color>
+    <color name="yellow">#f0e38d</color>
+
+    <color name="ecoButtons">#aca29a</color>
+    <color name="dynamicButtons">#ece8e4</color>
+    <color name="monochromeButtons">#ece0cd</color>
+    <color name="watermelon_pink">#fbcdcf</color>
+
+
+</resources>
