@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.segfault.closetmanager.Closet.ClosetFragment">
+    tools:context="com.arori4.lookbook.Closet.ClosetFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,11 +38,6 @@
             android:orientation="vertical">
         </ListView>
 
-        <include
-            android:id="@+id/closet_bottom_bar"
-            layout="@layout/bottom_bar"
-            android:layout_width="match_parent"
-            android:layout_height="@+dimen/bottom_bar_height" />
 
     </LinearLayout>
 

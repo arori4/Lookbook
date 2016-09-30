@@ -50,7 +50,7 @@ public class LoginActivity extends Activity {
     /* *************************************
      *              GENERAL                *
      ***************************************/
-    /* TextView that is used to display information about the logged in user */
+    /* TextView that is used to display information dialog_about the logged in user */
     private TextView mLoggedInStatusTextView;
 
     /* A dialog that is presented until the Firebase authentication finished. */
@@ -113,7 +113,7 @@ public class LoginActivity extends Activity {
         //Receive account singleton
         Account currentAccount = IClosetApplication.getAccount();
 
-        //Load closet
+        //Load fragment_closet
         Closet currentCloset = currentAccount.getCloset();
         loadCloset(currentCloset);
 
@@ -172,7 +172,7 @@ public class LoginActivity extends Activity {
     private void loadCloset(Closet currentCloset){
 
         //Receive preferences
-        mPrefs  = getSharedPreferences("com.arori4.lookbook", Context.MODE_PRIVATE);
+        mPrefs  = getSharedPreferences("com.arori4.fragment_lookbook", Context.MODE_PRIVATE);
 
         //Get the list of IDs. Create a new one if it's not available
         String ids = mPrefs.getString(IClosetApplication.PREFERENCE_CLOTHING_ID, "");
@@ -195,16 +195,16 @@ public class LoginActivity extends Activity {
     private void loadLookbookToAccount(Account currentAccount) {
 
         //Receive preferences
-        mPrefs  = getSharedPreferences("com.arori4.lookbook", Context.MODE_PRIVATE);
+        mPrefs  = getSharedPreferences("com.arori4.fragment_lookbook", Context.MODE_PRIVATE);
 
-        //Receive lookbook
+        //Receive fragment_lookbook
         //http://stackoverflow.com/questions/5554217/google-gson-deserialize-listclass-object-generic-type/5554296#5554296
         String lookbookString = mPrefs.getString(IClosetApplication.PREFERENCE_LOOKBOOK_ID, "");
         Type currentType = new TypeToken<List<List<String>>>(){}.getType();
         List<List<String>> currentLookbookString = new Gson().fromJson(lookbookString, currentType);
         if (currentLookbookString == null) {
             currentLookbookString = new ArrayList<>();
-            System.err.println("Created a new lookbook in LoginActivity.java");
+            System.err.println("Created a new fragment_lookbook in LoginActivity.java");
         }
 
         Lookbook currentLookbook = currentAccount.getLookbook();

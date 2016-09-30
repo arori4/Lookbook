@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@color/background_material_light_closet"
     android:orientation="vertical"
-    tools:context="com.segfault.closetmanager.Lookbook.OutfitGenFragment"
+    tools:context="com.arori4.lookbook.Lookbook.OutfitGenFragment"
     android:id="@+id/outfit_gen_parent_layout"
     android:fitsSystemWindows="true" >
 

@@ -35,7 +35,7 @@ public class ViewClothingActivity extends BaseActivity {
         setToolbar((Toolbar) findViewById(R.id.toolbar));
 
         // get preferences
-        mPrefs = getSharedPreferences("com.arori4.lookbook", Context.MODE_PRIVATE);
+        mPrefs = getSharedPreferences("com.arori4.fragment_lookbook", Context.MODE_PRIVATE);
         SharedPreferences.Editor prefsEditor = mPrefs.edit();
     }
 

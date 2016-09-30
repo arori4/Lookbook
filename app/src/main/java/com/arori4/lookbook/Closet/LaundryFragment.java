@@ -43,7 +43,7 @@ public class LaundryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        mCurrentView = inflater.inflate(R.layout.laundry, container, false);
+        mCurrentView = inflater.inflate(R.layout.fragment_laundry, container, false);
 
         //Find all the views
         mLaundryParentLayout = (ViewGroup) mCurrentView.findViewById(R.id.laundry_parent_layout);
@@ -97,14 +97,14 @@ public class LaundryFragment extends Fragment {
     }
 
     /**
-     * Does laundry when the view is pressed
+     * Does fragment_laundry when the view is pressed
      * @param view - do nothing with this
      */
     public void doLaundry(View view) {
 
-        //do nothing if the laundry list is empty
+        //do nothing if the fragment_laundry list is empty
         if (mLaundryList.isEmpty()){
-            Toast newToast = Toast.makeText(mContext, "There is no laundry to clean.",
+            Toast newToast = Toast.makeText(mContext, "There is no fragment_laundry to clean.",
                     Toast.LENGTH_SHORT);
             newToast.show();
         }
@@ -116,7 +116,7 @@ public class LaundryFragment extends Fragment {
             //notify and clear by running onStart()
             updateGridLayout();
 
-            //signify to user that we have done laundry
+            //signify to user that we have done fragment_laundry
             Toast newToast = Toast.makeText(mContext, "Marked all clothing as clean (not worn).",
                     Toast.LENGTH_SHORT);
             newToast.show();

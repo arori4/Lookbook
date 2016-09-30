@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- When there is nothing in the closet or the lookbook, this layout shows. -->
+<!-- When there is nothing in the fragment_closet or the fragment_lookbook, this layout shows. -->
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"

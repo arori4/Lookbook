@@ -27,7 +27,7 @@ import java.util.List;
 
 /**
  * Created by Christopher Cabreros on 05-May-16.
- * Class that defines the lookbook activity
+ * Class that defines the fragment_lookbook activity
  */
 public class LookbookFragment extends Fragment {
 
@@ -43,7 +43,7 @@ public class LookbookFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        mCurrentView = inflater.inflate(R.layout.lookbook, container, false);
+        mCurrentView = inflater.inflate(R.layout.fragment_lookbook, container, false);
 
         //Find all the views
         mLookbookParentLayout = (ViewGroup) mCurrentView.findViewById(R.id.lookbook_parent_layout);
@@ -56,7 +56,7 @@ public class LookbookFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        //Update lookbook
+        //Update fragment_lookbook
         mCurrentLookbook = IClosetApplication.getAccount().getLookbook();
 
         //check if we have any clothing
@@ -74,11 +74,11 @@ public class LookbookFragment extends Fragment {
             }
         }
         else{
-            //Remove the content view and add in the regular lookbook scroll view
+            //Remove the content view and add in the regular fragment_lookbook scroll view
             mLookbookParentLayout.removeViewAt(mLookbookGridViewIndex);
             mLookbookParentLayout.addView(mLookbookRecyclerView, mLookbookGridViewIndex);
 
-            //Create the adapter and add stuff to the closet view
+            //Create the adapter and add stuff to the fragment_closet view
             List<Outfit> outfitList = mCurrentLookbook.getOutfitList();
             List<Outfit> verifiedOutfitList = new ArrayList<>();
 

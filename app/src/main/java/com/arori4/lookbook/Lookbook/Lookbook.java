@@ -28,7 +28,7 @@ public class Lookbook {
 
     public void deserializeAllOutfits(List<List<String>> list){
         if (mBelongingCloset == null){
-            System.err.println("Lookbook does not have a belonging closet.");
+            System.err.println("Lookbook does not have a belonging fragment_closet.");
         }
         for (int index = 0; index < list.size(); index++){
             Outfit newOutfit = new Outfit();

@@ -67,11 +67,11 @@ public class OutfitGenFragment extends Fragment {
     private Spinner color;
 
     private View mCurrentView;
-    final Activity mContext = getActivity();
+    Activity mContext = getActivity();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        mContext = getActivity();
         mCurrentView =  inflater.inflate(R.layout.outfit_gen, container, false);
 
         //Get the required views
@@ -216,7 +216,7 @@ public class OutfitGenFragment extends Fragment {
             name = "No Name";
         }
 
-        //Set the name and add the outfit to the lookbook
+        //Set the name and add the outfit to the fragment_lookbook
         mCurrentOutfit.setName(name);
         //TODO: set weather and occasion
         mLookbook.addOutfit(mCurrentOutfit);
@@ -225,7 +225,7 @@ public class OutfitGenFragment extends Fragment {
         mCurrentOutfit.updateSerializedList();
 
         //Receive preference editor
-        SharedPreferences mPrefs = mContext.getSharedPreferences("com.arori4.lookbook", Context.MODE_PRIVATE);
+        SharedPreferences mPrefs = mContext.getSharedPreferences("com.arori4.fragment_lookbook", Context.MODE_PRIVATE);
         SharedPreferences.Editor prefsEditor = mPrefs.edit();
         //Prevent circular dependencies
         Gson gson = new GsonBuilder().setExclusionStrategies(new ExclusionStrategy() {
@@ -240,14 +240,14 @@ public class OutfitGenFragment extends Fragment {
             }
         }).serializeNulls().create();
 
-        //Convert lookbook to gson
+        //Convert fragment_lookbook to gson
         String id_list = gson.toJson(mLookbook.createSerializedList());
         prefsEditor.putString(IClosetApplication.PREFERENCE_LOOKBOOK_ID, id_list);
         //Apply changes
         prefsEditor.apply();
 
         //Create the toast text
-        Toast newToast = Toast.makeText(mContext, "Saved outfit to lookbook", Toast.LENGTH_SHORT);
+        Toast newToast = Toast.makeText(mContext, "Saved outfit to fragment_lookbook", Toast.LENGTH_SHORT);
         newToast.show();
 
         //Prevent us from saving a duplicate
@@ -266,7 +266,7 @@ public class OutfitGenFragment extends Fragment {
         clearLayouts();
 
         if (mCloset.getList().isEmpty()) {
-            Toast newToast = Toast.makeText(mContext, "No clothing in closet.", Toast.LENGTH_SHORT);
+            Toast newToast = Toast.makeText(mContext, "No clothing in fragment_closet.", Toast.LENGTH_SHORT);
             newToast.show();
         }
 
@@ -411,7 +411,7 @@ public class OutfitGenFragment extends Fragment {
             super(context, R.layout.closet_category_clothing_image, new ArrayList<Clothing>());
 
             //we can't get the category from objects because sometimes the list will be of size 0
-            //Set the picture and the text for the closet Category
+            //Set the picture and the text for the fragment_closet Category
             switch (clothingType) {
                 case Clothing.HAT:
                     mPreferenceList = new PreferenceList(false, Clothing.HAT, null, null, null, null, null, null);

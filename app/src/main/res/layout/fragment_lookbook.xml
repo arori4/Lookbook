@@ -34,10 +34,5 @@
         android:layout_gravity="center_horizontal"
         android:background="@android:color/transparent"/>
 
-    <include
-        layout="@layout/bottom_bar"
-        android:id="@+id/lookbook_bottom_bar"
-        android:layout_width="match_parent"
-        android:layout_height="@+dimen/bottom_bar_height" />
 
 </LinearLayout>

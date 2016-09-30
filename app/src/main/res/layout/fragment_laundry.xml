@@ -73,10 +73,4 @@
         android:verticalSpacing="1dp">
     </GridView>
 
-    <include
-        android:id="@+id/laundry_bottom_bar"
-        layout="@layout/bottom_bar"
-        android:layout_width="match_parent"
-        android:layout_height="@+dimen/bottom_bar_height"/>
-
 </LinearLayout>

@@ -89,7 +89,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public void goToAbout() {
         Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.about);
+        dialog.setContentView(R.layout.dialog_about);
         dialog.show();
     }
 

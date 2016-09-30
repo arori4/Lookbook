@@ -29,7 +29,7 @@ import java.util.List;
 
 /**
  * Created by Christopher Cabreros on 05-May-16.
- * Defines the fragment that displays the closet.
+ * Defines the fragment that displays the fragment_closet.
  */
 public class ClosetFragment extends Fragment {
 
@@ -49,13 +49,13 @@ public class ClosetFragment extends Fragment {
     private List<Clothing> hatList = new ArrayList<>();
     private List<Clothing> jacketList = new ArrayList<>();
 
-    final Activity mContext = getActivity();
+    Activity mContext = getActivity();
     View mCurrentView = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        mCurrentView =  inflater.inflate(R.layout.closet, container, false);
+        mCurrentView =  inflater.inflate(R.layout.fragment_closet, container, false);
 
         //Find all the views
         mClosetParentLayout = (ViewGroup) mCurrentView.findViewById(R.id.closet_vertical_linear_layout);
@@ -185,11 +185,12 @@ public class ClosetFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        mContext = getActivity();
         updateClosetView();
     }
 
     private void updateClosetView(){
-        //update closet
+        //update fragment_closet
         mCurrentCloset = IClosetApplication.getAccount().getCloset();
         System.out.println("CLOSET SIZE: " + mCurrentCloset.getList().size());
 
@@ -248,7 +249,7 @@ public class ClosetFragment extends Fragment {
             }
         }
         else { //refresh the amount of clothing we have
-            //add stuff to the closet list view
+            //add stuff to the fragment_closet list view
             ClosetCategoryAdapter adapter = new ClosetCategoryAdapter(mContext, listOfLists);
             if (mClosetListView != null) {
                 mClosetListView.setAdapter(adapter);
@@ -288,13 +289,13 @@ public class ClosetFragment extends Fragment {
             //add stuff to the linearLayout
             final List<Clothing> currentList = getItem(position);
 
-            //Get each closet category
+            //Get each fragment_closet category
             LinearLayout categoryLeftBox = (LinearLayout) categoryView.findViewById(R.id.closet_category_left_layout);
             ImageView categoryViewImage = (ImageView) categoryView.findViewById(R.id.closet_category_picture);
             TextView categoryTextView = (TextView) categoryView.findViewById(R.id.closet_category_text);
             PreferenceList categoryPreferenceList = null;
 
-            //Set the picture and the text for the closet Category
+            //Set the picture and the text for the fragment_closet Category
             if (!currentList.isEmpty() && currentList.get(0).getCategory().equals(Clothing.HAT)) {
                 categoryViewImage.setImageResource(R.drawable.cap);
                 categoryTextView.setText("Hat");

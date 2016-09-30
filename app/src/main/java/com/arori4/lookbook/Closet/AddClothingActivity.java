@@ -122,7 +122,7 @@ public class AddClothingActivity extends BaseActivity {
                 if (lostBox.isChecked())
                     isLost = true;
 
-                //create new clothing object - set to currClothing and add to closet
+                //create new clothing object - set to currClothing and add to fragment_closet
                 if (validSelections) {
 
                     //Create the clothing
@@ -136,7 +136,7 @@ public class AddClothingActivity extends BaseActivity {
                     //DO NOT SET BITMAP YET
 
                     //Receive preference editor
-                    mPrefs = getSharedPreferences("com.arori4.lookbook", Context.MODE_PRIVATE);
+                    mPrefs = getSharedPreferences("com.arori4.fragment_lookbook", Context.MODE_PRIVATE);
                     SharedPreferences.Editor prefsEditor = mPrefs.edit();
                     Gson gson = new Gson();
 
@@ -201,7 +201,7 @@ public class AddClothingActivity extends BaseActivity {
 
 
     /**
-     * We will not create a new intent. Finishing this should go back to closet.
+     * We will not create a new intent. Finishing this should go back to fragment_closet.
      */
     protected void goBackToCloset() {
         this.finish();
@@ -248,7 +248,7 @@ public class AddClothingActivity extends BaseActivity {
     }
 
     public void addClothing(View view) {
-        //TODO: take the values from all the spinners and add the clothing to the closet
+        //TODO: take the values from all the spinners and add the clothing to the fragment_closet
     }
 
     public void showImagePreview(View view) {

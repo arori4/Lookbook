@@ -27,7 +27,7 @@ import java.util.List;
  */
 public class ViewClothingByCatActivity extends BaseActivity {
 
-    public static final String CAME_FROM_CLOSET_STRING = "yes it did come from the closet";
+    public static final String CAME_FROM_CLOSET_STRING = "yes it did come from the fragment_closet";
 
     private ViewGroup mCategoryParentLayout;
     private GridView mCategoryGridView;

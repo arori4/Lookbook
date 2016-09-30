@@ -11,8 +11,8 @@
         android:layout_width="fill_parent" />
 
     <fragment
-        android:name="com.segfault.closetmanager.Accounts.PreferencesFragment"
-        android:tag="com.segfault.closetmanager.PreferencesFragment"
+        android:name="com.arori4.lookbook.Accounts.PreferencesFragment"
+        android:tag="com.arori4.lookbook.PreferencesFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout="@layout/abc_action_bar_view_list_nav_layout" />

@@ -69,7 +69,7 @@ public class UpdateClothingActivity extends BaseActivity {
         setContentView(R.layout.update_clothing);
         setToolbar((Toolbar) findViewById(R.id.toolbar));
 
-        //get passed in clothing id to get correct clothing object from closet
+        //get passed in clothing id to get correct clothing object from fragment_closet
         id = (String) getIntent().getSerializableExtra("clothing_id");
         System.err.println("RENU: finding clothing with id in update clothing: " + id);
         mCurrClothing = mCurrCloset.findClothingByID(id);
@@ -142,7 +142,7 @@ public class UpdateClothingActivity extends BaseActivity {
                 if (lost.isChecked())
                     isLost = true;
 
-                //create new clothing object - set to currClothing and add to closet
+                //create new clothing object - set to currClothing and add to fragment_closet
                 if (validSelections) {
 
                     //update currClothing
@@ -156,7 +156,7 @@ public class UpdateClothingActivity extends BaseActivity {
                     mCurrClothing.setNotes(input_notes);
 
                     //Receive preferences
-                    mPrefs = getSharedPreferences("com.arori4.lookbook", Context.MODE_PRIVATE);
+                    mPrefs = getSharedPreferences("com.arori4.fragment_lookbook", Context.MODE_PRIVATE);
                     SharedPreferences.Editor prefsEditor = mPrefs.edit();
                     gson = new Gson();
 
@@ -202,7 +202,7 @@ public class UpdateClothingActivity extends BaseActivity {
     }
 
     /**
-     * We will not create a new intent. Finishing this should go back to closet.
+     * We will not create a new intent. Finishing this should go back to fragment_closet.
      */
     protected void goBack() {
         this.finish();
@@ -291,7 +291,7 @@ public class UpdateClothingActivity extends BaseActivity {
                 // Otherwise, set the URL to null.
                 Uri.parse("http://host/path"),
                 // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://com.arori4.lookbook/http/host/path")
+                Uri.parse("android-app://com.arori4.fragment_lookbook/http/host/path")
         );
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();

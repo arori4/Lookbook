@@ -275,7 +275,7 @@ public class Closet {
     }
 
     /**
-     * Someone think about this
+     * Someone think dialog_about this
      */
     public void getClothing(){
 

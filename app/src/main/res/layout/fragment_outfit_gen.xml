@@ -10,7 +10,7 @@
     android:background="@color/background_material_light_closet"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.segfault.closetmanager.Lookbook.OutfitGenFragment">
+    tools:context="com.arori4.lookbook.Lookbook.OutfitGenFragment">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -205,12 +205,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
-    <include
-        android:id="@+id/outfit_gen_bottom_bar"
-        layout="@layout/bottom_bar"
-        android:layout_width="match_parent"
-        android:layout_height="@+dimen/bottom_bar_height"/>
 
 
 </LinearLayout>

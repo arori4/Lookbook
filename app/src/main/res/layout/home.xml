@@ -30,7 +30,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
-    <!--closet icon set-->
+    <!--fragment_closet icon set-->
     <LinearLayout
         android:id="@+id/closet_layout"
         android:layout_width="fill_parent"
@@ -103,7 +103,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
-    <!--lookbook icon set -->
+    <!--fragment_lookbook icon set -->
     <LinearLayout
         android:id="@+id/lookbook_layout"
         android:layout_width="fill_parent"

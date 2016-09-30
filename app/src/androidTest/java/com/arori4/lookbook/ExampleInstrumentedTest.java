@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.arori4.lookbook", appContext.getPackageName());
+        assertEquals("com.arori4.fragment_lookbook", appContext.getPackageName());
     }
 }
