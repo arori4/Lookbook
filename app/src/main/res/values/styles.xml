@@ -2,11 +2,6 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- no action bar-->
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -17,6 +12,7 @@
         <item name="color2">@color/pink</item>
         <item name="color3">@color/darkerblue</item>
         <item name="color4">@color/yellow</item>
+
     </style>
 
     <style name="EcoTheme" parent="AppTheme">
@@ -65,10 +61,11 @@
     <style name="ClosetAppTheme" parent="AppTheme" >
         <item name="android:colorBackground">@color/background_material_light_closet</item>
     </style>
+
     <style name="PhotoGridLayout">
         <item name="android:drawSelectorOnTop">true</item>
         <item name="android:listSelector">@drawable/photogrid_list_selector</item>
-    categoryGridLayout</style>
+    </style>
 
 
 </resources>

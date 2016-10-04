@@ -49,13 +49,14 @@ public class ClosetFragment extends Fragment {
     private List<Clothing> hatList = new ArrayList<>();
     private List<Clothing> jacketList = new ArrayList<>();
 
-    Activity mContext = getActivity();
+    Activity mContext;
     View mCurrentView = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         mCurrentView =  inflater.inflate(R.layout.fragment_closet, container, false);
+        mContext = getActivity();
 
         //Find all the views
         mClosetParentLayout = (ViewGroup) mCurrentView.findViewById(R.id.closet_vertical_linear_layout);

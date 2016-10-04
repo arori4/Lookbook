@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
-      tools:context="com.segfault.closetmanager.BaseActivity">
+      tools:context="com.arori4.lookbook.BaseActivity">
 
     <item
         android:id="@+id/action_settings"
@@ -9,7 +9,7 @@
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/about"
-        android:title="About"/>
+        android:id="@+id/action_about"
+        android:title="@string/action_about"/>
 
 </menu>

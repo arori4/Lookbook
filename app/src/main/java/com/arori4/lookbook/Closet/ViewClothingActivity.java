@@ -13,11 +13,11 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.arori4.lookbook.BaseActivity;
+import com.arori4.lookbook.OldBaseActivity;
 import com.arori4.lookbook.IClosetApplication;
 import com.arori4.lookbook.R;
 
-public class ViewClothingActivity extends BaseActivity {
+public class ViewClothingActivity extends OldBaseActivity {
     Context context = this;
     Button delete_button;
     Button update_button;

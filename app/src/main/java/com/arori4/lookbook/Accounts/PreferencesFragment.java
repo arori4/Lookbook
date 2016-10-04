@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 
-import com.arori4.lookbook.HomeActivity;
+import com.arori4.lookbook.BaseActivity;
 import com.arori4.lookbook.R;
 
 
@@ -38,7 +38,7 @@ public class PreferencesFragment extends PreferenceFragment
                     // recreate the task stack
                     android.support.v4.app.TaskStackBuilder.create(getActivity())
                             //ComponentName prev = this.getCallingActivity();
-                            .addNextIntent(new Intent(getActivity(), HomeActivity.class))
+                            .addNextIntent(new Intent(getActivity(), BaseActivity.class))
                             .addNextIntent(getActivity().getIntent())
                             .startActivities();
 

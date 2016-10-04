@@ -36,7 +36,7 @@ public class LaundryFragment extends Fragment {
     private Account mCurrentAccount = IClosetApplication.getAccount();
     private Closet mCurrentCloset = mCurrentAccount.getCloset();
 
-    final Activity mContext = getActivity();
+    Activity mContext;
     View mCurrentView = null;
 
     @Nullable
@@ -44,6 +44,7 @@ public class LaundryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         mCurrentView = inflater.inflate(R.layout.fragment_laundry, container, false);
+        mContext = getActivity();
 
         //Find all the views
         mLaundryParentLayout = (ViewGroup) mCurrentView.findViewById(R.id.laundry_parent_layout);

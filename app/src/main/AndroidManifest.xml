@@ -27,71 +27,45 @@
         </activity>
 
         <activity
-            android:name=".HomeActivity"
+            android:name=".BaseActivity"
             android:label="@string/icloset">
         </activity>
 
         <activity
             android:name=".Closet.AddClothingActivity"
             android:label="Add Clothing"
-            android:parentActivityName=".HomeActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity"/>
+            android:parentActivityName=".BaseActivity">
         </activity>
 
         <activity
             android:name=".Closet.UpdateClothingActivity"
             android:label="Update Clothing"
-            android:parentActivityName=".HomeActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity"/>
+            android:parentActivityName=".BaseActivity">
         </activity>
 
         <activity
             android:name=".Closet.ViewClothingActivity"
             android:label="View Clothing"
-            android:parentActivityName=".HomeActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity"/>
+            android:parentActivityName=".BaseActivity">
         </activity>
 
         <activity
-            android:name=".Accounts.PreferencesActivity"
+            android:name=".Accounts.SettingsActivity"
             android:label="Preferences"
-            android:parentActivityName=".HomeActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity"/>
+            android:parentActivityName=".BaseActivity">
         </activity>
 
         <activity
             android:name=".Closet.CameraActivity"
             android:label="Camera">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity"/>
         </activity>
 
         <activity
             android:name=".Closet.ViewClothingByCatActivity"
             android:label="Preference View"
-            android:parentActivityName=".HomeActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity"/>
+            android:parentActivityName=".BaseActivity">
         </activity>
 
-        <activity
-            android:name=".Closet.LaundryFragment"
-            android:label="Do Laundry"
-            android:parentActivityName=".HomeActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity"/>
-        </activity>
     </application>
 
 </manifest>

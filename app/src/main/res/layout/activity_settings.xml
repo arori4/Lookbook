@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/tool_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/tool_bar_height"/>
+
+    <fragment
+        android:name="com.arori4.lookbook.Accounts.PreferencesFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="com.arori4.lookbook.PreferencesFragment"
+        tools:layout="@layout/abc_action_bar_view_list_nav_layout"/>
+
+</LinearLayout>

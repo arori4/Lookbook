@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.arori4.lookbook.Accounts.Account;
-import com.arori4.lookbook.BaseActivity;
+import com.arori4.lookbook.OldBaseActivity;
 import com.arori4.lookbook.IClosetApplication;
 import com.arori4.lookbook.R;
 
@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * Defines the activity when user decides to view clothing by category.
  */
-public class ViewClothingByCatActivity extends BaseActivity {
+public class ViewClothingByCatActivity extends OldBaseActivity {
 
     public static final String CAME_FROM_CLOSET_STRING = "yes it did come from the fragment_closet";
 

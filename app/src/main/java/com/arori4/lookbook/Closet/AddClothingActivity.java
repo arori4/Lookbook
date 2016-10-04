@@ -19,7 +19,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
-import com.arori4.lookbook.BaseActivity;
+import com.arori4.lookbook.OldBaseActivity;
 import com.arori4.lookbook.IClosetApplication;
 import com.arori4.lookbook.R;
 import com.google.gson.Gson;
@@ -28,7 +28,7 @@ import com.google.gson.Gson;
  * Created by Christopher Cabreros on 05-May-16.
  * Adds the clothing into the database
  */
-public class AddClothingActivity extends BaseActivity {
+public class AddClothingActivity extends OldBaseActivity {
 
     private Spinner categorySpinner;
     private Spinner weatherSpinner;

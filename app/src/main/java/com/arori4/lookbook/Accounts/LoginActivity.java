@@ -1,8 +1,6 @@
 package com.arori4.lookbook.Accounts;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,18 +8,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
-import com.facebook.AccessToken;
-import com.facebook.AccessTokenTracker;
-import com.facebook.CallbackManager;
-import com.facebook.login.LoginManager;
-import com.facebook.login.widget.LoginButton;
 //import com.firebase.client.AuthData;
 //import com.firebase.client.Firebase;
 //import com.firebase.client.FirebaseError;
@@ -29,7 +17,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.arori4.lookbook.Closet.Closet;
 import com.arori4.lookbook.Closet.Clothing;
-import com.arori4.lookbook.HomeActivity;
+import com.arori4.lookbook.BaseActivity;
 import com.arori4.lookbook.IClosetApplication;
 import com.arori4.lookbook.Lookbook.Lookbook;
 import com.arori4.lookbook.R;
@@ -37,50 +25,12 @@ import com.arori4.lookbook.R;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 public class LoginActivity extends Activity {
 
     private static final String TAG = LoginActivity.class.getSimpleName();
-
-
-    /* *************************************
-     *              GENERAL                *
-     ***************************************/
-    /* TextView that is used to display information dialog_about the logged in user */
-    private TextView mLoggedInStatusTextView;
-
-    /* A dialog that is presented until the Firebase authentication finished. */
-    private ProgressDialog mAuthProgressDialog;
-
-//    /* A reference to the Firebase */
-//    private Firebase mFirebaseRef;
-//
-//    /* Data from the authenticated user */
-//    private AuthData mAuthData;
-//
-//    /* Listener for Firebase session changes */
-//    private Firebase.AuthStateListener mAuthStateListener;
-
-
-    /* *************************************
-     *              FACEBOOK               *
-     ***************************************/
-    /* The login button for Facebook */
-    private LoginButton mFacebookLoginButton;
-    /* The callback manager for Facebook */
-    private CallbackManager mFacebookCallbackManager;
-    /* Used to track user logging in/out off Facebook */
-    private AccessTokenTracker mFacebookAccessTokenTracker;
-
-    /* *************************************
-     *              PASSWORD               *
-     ***************************************/
-    private Button mPasswordLoginButton;
-
 
     // Storage variables
     SharedPreferences mPrefs;
@@ -91,21 +41,7 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.login);
-    }
-
-
-    /**
-     * This method fires when any startActivityForResult finishes. The requestCode maps to
-     * the value passed into startActivityForResult.
-     */
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        Map<String, String> options = new HashMap<String, String>();
-
-        mFacebookCallbackManager.onActivityResult(requestCode, resultCode, data);
-
+        setContentView(R.layout.activity_login);
     }
 
 
@@ -122,7 +58,7 @@ public class LoginActivity extends Activity {
 
 
         //Start a new intent
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, BaseActivity.class);
         this.finish();
         startActivity(intent);
     }

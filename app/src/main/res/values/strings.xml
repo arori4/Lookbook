@@ -18,4 +18,5 @@
     <string name="closet_category_text_view_default_text">picture goes here</string>
     <string name="add_clothing_image_dialog_description">add clothing image dialog description</string>
     <string name="view_clothing_by_category_no_matches">No clothing matches the query set.</string>
+    <string name="action_about">About</string>
 </resources>

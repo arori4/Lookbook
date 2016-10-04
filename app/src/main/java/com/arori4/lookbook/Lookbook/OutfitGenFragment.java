@@ -72,7 +72,7 @@ public class OutfitGenFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mContext = getActivity();
-        mCurrentView =  inflater.inflate(R.layout.outfit_gen, container, false);
+        mCurrentView =  inflater.inflate(R.layout.fragment_outfit_gen, container, false);
 
         //Get the required views
         mShoesButton = (ImageButton) mCurrentView.findViewById(R.id.outfit_gen_shoes_button);

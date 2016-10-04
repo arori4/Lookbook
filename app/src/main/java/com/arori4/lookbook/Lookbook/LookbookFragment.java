@@ -36,7 +36,7 @@ public class LookbookFragment extends Fragment {
     private int mLookbookGridViewIndex;
     private Lookbook mCurrentLookbook;
 
-    final Activity mContext = getActivity();
+    Activity mContext;
     View mCurrentView = null;
 
     @Nullable
@@ -44,6 +44,7 @@ public class LookbookFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         mCurrentView = inflater.inflate(R.layout.fragment_lookbook, container, false);
+        mContext = getActivity();
 
         //Find all the views
         mLookbookParentLayout = (ViewGroup) mCurrentView.findViewById(R.id.lookbook_parent_layout);
