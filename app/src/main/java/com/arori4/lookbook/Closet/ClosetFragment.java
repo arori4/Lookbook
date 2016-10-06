@@ -71,7 +71,7 @@ public class ClosetFragment extends Fragment {
 
                     //Create a new dialog
                     final Dialog add_clothing_dialog = new Dialog(mContext);
-                    add_clothing_dialog.setContentView(R.layout.add_clothing_type);
+                    add_clothing_dialog.setContentView(R.layout.dialog_add_clothing);
                     add_clothing_dialog.setTitle("Select Clothing Type");
 
                     //Add in action listeners for all the buttons

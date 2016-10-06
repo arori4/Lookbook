@@ -58,5 +58,5 @@
     <string name="do_laundry_text">Do Laundry!</string>
     <string name="laundry_button_image_description">laundry_button_image</string>
     <string name="accessory_button_description">accessory button_description</string>
-    <string name="welcome_message">Keep track of your clothing items and generate outfits with our virtual iCloset!</string>
+    <string name="welcome_message">Keep track of your clothing items and stylize yourself with our virtual closet!</string>
 </resources>

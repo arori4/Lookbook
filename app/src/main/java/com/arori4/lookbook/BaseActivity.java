@@ -1,6 +1,8 @@
 package com.arori4.lookbook;
 
+import android.app.Application;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -10,6 +12,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -26,14 +29,12 @@ import com.arori4.lookbook.Lookbook.OutfitGenFragment;
  */
 public class BaseActivity extends AppCompatActivity {
 
+    private static final String TAG = BaseActivity.class.getSimpleName();
+    private TabLayout mTabLayout;
+    private ViewPager mViewPager;
+    private CharSequence[] mTitles;
+
     //Variables
-    private CharSequence mTitles[] = { //these are all the tabs
-            getString(R.string.home),
-            getString(R.string.closet),
-            getString(R.string.stylist),
-            getString(R.string.lookbook),
-            getString(R.string.laundry)
-    };
     private boolean mBackButtonPressed = false;
 
     @Override
@@ -41,24 +42,38 @@ public class BaseActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        mTitles = new CharSequence[]{ //these are all the tabs
+                getString(R.string.home),
+                getString(R.string.closet),
+                getString(R.string.stylist),
+                getString(R.string.lookbook),
+                getString(R.string.laundry)
+        };
 
         //Setup the pager and the adapter
         HomePagerAdapter homePagerAdapter = new HomePagerAdapter(getSupportFragmentManager(), mTitles);
-        ViewPager toolbarPager = (ViewPager) findViewById(R.id.home_pager);
-        if (toolbarPager != null) {
-            toolbarPager.setAdapter(homePagerAdapter);
+        mViewPager = (ViewPager) findViewById(R.id.home_pager);
+        if (mViewPager != null) {
+            mViewPager.setAdapter(homePagerAdapter);
+        } else{
+            Log.e(TAG, "Could not set up toolbar pager");
         }
 
         //Setup tab layout
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.home_tabs);
-        if (tabLayout != null) {
-            tabLayout.setupWithViewPager(toolbarPager);
+        mTabLayout = (TabLayout) findViewById(R.id.home_tabs);
+        if (mTabLayout != null) {
+            mTabLayout.setupWithViewPager(mViewPager);
+        } else{
+            Log.e(TAG, "Could not set up tab layout");
         }
 
         //Setup toolbar
         Toolbar homeToolbar = (Toolbar) findViewById(R.id.activity_home_toolbar);
-        setSupportActionBar(homeToolbar);
-
+        if (homeToolbar != null) {
+            setSupportActionBar(homeToolbar);
+        } else{
+            Log.e(TAG, "Could not find home toolbar");
+        }
     }
 
 
@@ -196,6 +211,19 @@ public class BaseActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+
+    /**
+     * Force switches the tab
+     * @param position - position to switch to
+     */
+    public void switchTab(int position){
+        if (position < 0 || position >= mTitles.length){
+            Log.e(TAG, "Position of " + position + " is not in correct bounds");
+            return;
+        }
+        mViewPager.setCurrentItem(position, true);
     }
 
 }
