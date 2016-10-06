@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">iCloset</string>
-
+    <string name="app_name">Lookbook</string>
     <string name="facebook_app_id">1773229412963460</string>
 
     <string name="action_settings">Preferences</string>
@@ -12,13 +11,13 @@
     <string name="tags">Tags: </string>
     <string name="notes">Notes: </string>
 
-    <!-- bottom bar -->
+    <!-- Functions -->
+    <string name="home">Home</string>
     <string name="closet">Closet</string>
-    <string name="outfit_creator">Stylist</string>
+    <string name="stylist">Stylist</string>
     <string name="lookbook">Lookbook</string>
     <string name="more">More</string>
-
-    <string name="icloset">iCloset</string>
+    <string name="laundry">Laundry</string>
 
     <string name="closet_activity_name">Closet</string>
     <string name="lookbook_activity_name">Lookbook</string>

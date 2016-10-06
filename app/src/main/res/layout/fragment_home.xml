@@ -1,152 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<TableLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_material_light_closet"
-    android:orientation="vertical">
+    android:alignmentMode="alignMargins"
+    android:background="@color/background_material_light_closet">
 
-    <LinearLayout
+    <TableRow
+        android:id="@+id/tableRow1"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:baselineAligned="false"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:padding="5dip">
 
         <LinearLayout
-            android:id="@+id/closet_layout"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:background="?color1"
+            android:id="@+id/home_closet_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/bottom_bar_closet_button"
+                android:id="@+id/home_closet_image"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/closet_button_picture_description"
-                android:padding="@dimen/abc_dialog_padding_material"
+                android:padding="@dimen/home_image_padding"
                 android:scaleType="fitCenter"
                 android:src="@drawable/closet"/>
 
             <TextView
-                android:id="@+id/closetTitle"
-                android:layout_width="fill_parent"
+                android:id="@+id/home_closet_text"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:padding="@dimen/abc_action_bar_content_inset_material"
+                android:padding="@dimen/home_text_padding"
                 android:text="@string/closet"
                 android:textAlignment="center"
                 android:textIsSelectable="false"
-                android:textSize="@dimen/abc_text_size_large_material"
+                android:textSize="@dimen/home_text_size"
                 android:typeface="monospace"/>
         </LinearLayout>
 
-        <!--outfit generator icon set -->
         <LinearLayout
-            android:id="@+id/outfitgen_layout"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:background="?color2"
-            android:orientation="vertical">
+            android:id="@+id/home_stylist_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/bottom_bar_outfit_generator_button"
+                android:id="@+id/home_stylist_image"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/stylist_button_picture_description"
-                android:padding="@dimen/abc_dialog_padding_material"
+                android:padding="@dimen/home_image_padding"
                 android:scaleType="fitCenter"
                 android:src="@drawable/outfitgen"/>
 
             <TextView
-                android:id="@+id/outfitgenTitle"
+                android:id="@+id/home_stylist_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:padding="@dimen/abc_action_bar_content_inset_material"
-                android:text="@string/outfit_creator"
+                android:padding="@dimen/home_text_padding"
+                android:text="@string/stylist"
                 android:textAlignment="center"
-                android:textSize="@dimen/abc_text_size_large_material"
+                android:textSize="@dimen/home_text_size"
                 android:typeface="monospace"/>
 
         </LinearLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-        <!--fragment_lookbook icon set -->
         <LinearLayout
-            android:id="@+id/lookbook_layout"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:background="?color3"
-            android:orientation="vertical">
+            android:id="@+id/home_lookbook_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/bottom_bar_lookbook_button"
+                android:id="@+id/home_lookbook_image"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/lookbook_button_picture_description"
-                android:padding="@dimen/abc_dialog_padding_material"
+                android:padding="@dimen/home_image_padding"
                 android:scaleType="fitCenter"
                 android:src="@drawable/lookbook"/>
 
             <TextView
-                android:id="@+id/lookbookTitle"
+                android:id="@+id/home_lookbook_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:padding="@dimen/abc_action_bar_content_inset_material"
+                android:padding="@dimen/home_text_padding"
                 android:text="@string/lookbook"
                 android:textAlignment="center"
-                android:textSize="@dimen/abc_text_size_large_material"
+                android:textSize="@dimen/home_text_size"
                 android:typeface="monospace"/>
 
         </LinearLayout>
 
-        <!--More icon set-->
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:layout_weight="1">
+
         <LinearLayout
-            android:id="@+id/more_layout"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:background="?color4"
-            android:orientation="vertical">
+            android:id="@+id/home_laundry_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/more"
+                android:id="@+id/home_laundry_image"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/more_button_picture_description"
-                android:padding="@dimen/abc_alert_dialog_button_bar_height"
+                android:padding="@dimen/home_image_padding"
                 android:scaleType="fitCenter"
                 android:src="@drawable/washing_machine"/>
 
             <TextView
-                android:id="@+id/moreTitle"
+                android:id="@+id/home_laundry_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:padding="@dimen/abc_action_bar_content_inset_material"
-                android:text="Laundry"
+                android:padding="@dimen/home_text_padding"
+                android:text="@string/laundry"
                 android:textAlignment="center"
-                android:textSize="@dimen/abc_text_size_large_material"
+                android:textSize="@dimen/home_text_size"
                 android:typeface="monospace"/>
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/home_travel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
 
-</LinearLayout>
+            <ImageView
+                android:id="@+id/home_travel_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/more_button_picture_description"
+                android:padding="@dimen/home_image_padding"
+                android:scaleType="fitCenter"
+                android:src="@drawable/travel"/>
+
+            <TextView
+                android:id="@+id/home_travel_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:padding="@dimen/home_text_padding"
+                android:text="@string/travel"
+                android:textAlignment="center"
+                android:textSize="@dimen/home_text_size"
+                android:typeface="monospace"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_settings_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/home_settings_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/more_button_picture_description"
+                android:padding="@dimen/home_image_padding"
+                android:scaleType="fitCenter"
+                android:src="@drawable/preferences"/>
+
+            <TextView
+                android:id="@+id/home_settings_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:padding="@dimen/home_text_padding"
+                android:text="@string/settings"
+                android:textAlignment="center"
+                android:textSize="@dimen/home_text_size"
+                android:typeface="monospace"/>
+        </LinearLayout>
+        
+    </TableRow>
+
+</TableLayout>

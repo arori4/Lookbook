@@ -19,4 +19,6 @@
     <string name="add_clothing_image_dialog_description">add clothing image dialog description</string>
     <string name="view_clothing_by_category_no_matches">No clothing matches the query set.</string>
     <string name="action_about">About</string>
+    <string name="travel">Travel</string>
+    <string name="settings">Settings</string>
 </resources>

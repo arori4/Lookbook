@@ -21,12 +21,19 @@ import com.arori4.lookbook.Lookbook.LookbookFragment;
 import com.arori4.lookbook.Lookbook.OutfitGenFragment;
 
 /**
- * Home activity
+ * Base activity
+ * Most things are fragments of this activity
  */
 public class BaseActivity extends AppCompatActivity {
 
     //Variables
-    private CharSequence mTitles[] = {"Home", "Closet", "Outfit\nCreator", "Lookbook", "Laundry"};
+    private CharSequence mTitles[] = { //these are all the tabs
+            getString(R.string.home),
+            getString(R.string.closet),
+            getString(R.string.stylist),
+            getString(R.string.lookbook),
+            getString(R.string.laundry)
+    };
     private boolean mBackButtonPressed = false;
 
     @Override
