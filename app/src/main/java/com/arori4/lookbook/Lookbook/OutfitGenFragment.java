@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.arori4.lookbook.Closet.ClosetQuery;
 import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
 import com.google.gson.Gson;
@@ -26,7 +27,6 @@ import com.google.gson.GsonBuilder;
 import com.arori4.lookbook.Accounts.Account;
 import com.arori4.lookbook.Closet.Closet;
 import com.arori4.lookbook.Closet.Clothing;
-import com.arori4.lookbook.Closet.PreferenceList;
 import com.arori4.lookbook.Closet.ViewClothingByCatActivity;
 import com.arori4.lookbook.IClosetApplication;
 import com.arori4.lookbook.R;
@@ -294,8 +294,8 @@ public class OutfitGenFragment extends Fragment {
         newToast.show();
     }
 
-    /* Generate an outfit with PreferenceList */
-    public void generateOutfitPref(PreferenceList pref) {
+    /* Generate an outfit with ClosetQuery */
+    public void generateOutfitPref(ClosetQuery pref) {
         //Clear all of the views
         clearLayouts();
 
@@ -364,7 +364,7 @@ public class OutfitGenFragment extends Fragment {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                PreferenceList pref = getAttributes(wSp, oSp, cSp);
+                ClosetQuery pref = getAttributes(wSp, oSp, cSp);
                 generateOutfitPref(pref);
             }
         });
@@ -373,8 +373,8 @@ public class OutfitGenFragment extends Fragment {
         dialog.show();
     }
 
-    /* Create a PreferenceList from user input */
-    public PreferenceList getAttributes(Spinner spWeather, Spinner spOccasion, Spinner spColor) {
+    /* Create a ClosetQuery from user input */
+    public ClosetQuery getAttributes(Spinner spWeather, Spinner spOccasion, Spinner spColor) {
         String weatherPref = spWeather.getSelectedItem().toString();
         String occasionPref = spOccasion.getSelectedItem().toString();
         String colorPref = spColor.getSelectedItem().toString();
@@ -383,8 +383,8 @@ public class OutfitGenFragment extends Fragment {
         occasionPrefArray.add(occasionPref);
 
         //Boolean mWorn, String mCategory, String mColor, String mSize, List<String> mOccasion, String mStyle, String mWeather, String mSecondaryColor
-        //return new PreferenceList(colorPref, occasionPref, weatherPref);
-        return new PreferenceList(Boolean.FALSE, null, colorPref, null, occasionPrefArray, null, weatherPref, null);
+        //return new ClosetQuery(colorPref, occasionPref, weatherPref);
+        return new ClosetQuery(Boolean.FALSE, null, colorPref, null, occasionPrefArray, null, weatherPref, null);
     }
 
     public void setAccessory(View view) {
@@ -405,7 +405,7 @@ public class OutfitGenFragment extends Fragment {
      */
     private class OutfitGenLinearAdapter extends ArrayAdapter<Clothing> {
 
-        private PreferenceList mPreferenceList;
+        private ClosetQuery mClosetQuery;
 
         public OutfitGenLinearAdapter(Context context, String clothingType) {
             super(context, R.layout.closet_category_clothing_image, new ArrayList<Clothing>());
@@ -414,25 +414,25 @@ public class OutfitGenFragment extends Fragment {
             //Set the picture and the text for the fragment_closet Category
             switch (clothingType) {
                 case Clothing.HAT:
-                    mPreferenceList = new PreferenceList(false, Clothing.HAT, null, null, null, null, null, null);
+                    mClosetQuery = new ClosetQuery(false, Clothing.HAT, null, null, null, null, null, null);
                     break;
                 case Clothing.ACCESSORY:
-                    mPreferenceList = new PreferenceList(false, Clothing.ACCESSORY, null, null, null, null, null, null);
+                    mClosetQuery = new ClosetQuery(false, Clothing.ACCESSORY, null, null, null, null, null, null);
                     break;
                 case Clothing.BODY:
-                    mPreferenceList = new PreferenceList(false, Clothing.BODY, null, null, null, null, null, null);
+                    mClosetQuery = new ClosetQuery(false, Clothing.BODY, null, null, null, null, null, null);
                     break;
                 case Clothing.BOTTOM:
-                    mPreferenceList = new PreferenceList(false, Clothing.BOTTOM, null, null, null, null, null, null);
+                    mClosetQuery = new ClosetQuery(false, Clothing.BOTTOM, null, null, null, null, null, null);
                     break;
                 case Clothing.JACKET:
-                    mPreferenceList = new PreferenceList(false, Clothing.JACKET, null, null, null, null, null, null);
+                    mClosetQuery = new ClosetQuery(false, Clothing.JACKET, null, null, null, null, null, null);
                     break;
                 case Clothing.SHOE:
-                    mPreferenceList = new PreferenceList(false, Clothing.SHOE, null, null, null, null, null, null);
+                    mClosetQuery = new ClosetQuery(false, Clothing.SHOE, null, null, null, null, null, null);
                     break;
                 case Clothing.TOP:
-                    mPreferenceList = new PreferenceList(false, Clothing.TOP, null, null, null, null, null, null);
+                    mClosetQuery = new ClosetQuery(false, Clothing.TOP, null, null, null, null, null, null);
                     break;
             }
 
@@ -458,7 +458,7 @@ public class OutfitGenFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getContext(), ViewClothingByCatActivity.class);
-                    intent.putExtra(PreferenceList.EXTRA_STRING, mPreferenceList);
+                    intent.putExtra(ClosetQuery.EXTRA_STRING, mClosetQuery);
                     intent.putExtra(ViewClothingByCatActivity.CAME_FROM_CLOSET_STRING, false);
                     startActivityForResult(intent, CHOOSE_CLOTHING_REQUEST);
                 }
@@ -654,12 +654,12 @@ public class OutfitGenFragment extends Fragment {
      * @param clothingType - type of clothing to give
      */
     private void setManualChoosingIntent(String clothingType){
-        PreferenceList preference = new PreferenceList(false, clothingType, null, null, null, null, null, null);
+        ClosetQuery preference = new ClosetQuery(false, clothingType, null, null, null, null, null, null);
 
         //Create intent and pass to it
         Intent intent = new Intent(mContext, ViewClothingByCatActivity.class);
         intent.putExtra(ViewClothingByCatActivity.CAME_FROM_CLOSET_STRING, false);
-        intent.putExtra(PreferenceList.EXTRA_STRING, preference);
+        intent.putExtra(ClosetQuery.EXTRA_STRING, preference);
         startActivityForResult(intent, CHOOSE_CLOTHING_REQUEST);
     }
 

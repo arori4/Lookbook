@@ -1,117 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- THIS IS ACTUALLY IMPLEMENTED IN CLOSET ACTIVITY, not ADD_CLOTHING_ACTIVITY -->
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:weightSum="3"
+    tools:context=".Closet.ClosetFragment">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        tools:context=".Closet.ClosetFragment"
-        android:weightSum="3">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+        <ImageButton
+            android:id="@+id/add_accessory_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:contentDescription="@string/accessory_button_description"
+            android:scaleType="centerInside"
+            android:src="@drawable/accessory"
+            android:padding="@dimen/dialog_add_clothing_button_padding"/>
 
-            <ImageButton
-                android:id="@+id/add_accessory_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:contentDescription="@string/accessory_button_description"
-                android:scaleType="centerInside"
-                android:src="@drawable/accessory"
-                />
-
-
-            <ImageButton
-                android:id="@+id/add_shirt_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:contentDescription="@string/shirt_button_description"
-                android:scaleType="centerInside"
-                android:src="@drawable/top"
-                />
-
-
-            <ImageButton
-                android:id="@+id/add_pants_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:contentDescription="@string/pants_button_description"
-                android:scaleType="centerInside"
-                android:src="@drawable/pants"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+        <ImageButton
+            android:id="@+id/add_shirt_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:contentDescription="@string/shirt_button_description"
+            android:scaleType="centerInside"
+            android:src="@drawable/top"
+            android:padding="@dimen/dialog_add_clothing_button_padding"/>
 
-            <ImageButton
-                android:id="@+id/add_shoe_button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/shoe_button_description"
-                android:scaleType="centerInside"
-                android:src="@drawable/sneaker"
-                />
-
-
-            <ImageButton
-                android:id="@+id/add_dress_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:contentDescription="@string/dress_button_description"
-                android:scaleType="centerInside"
-                android:src="@drawable/dress"
-                />
-
-
-            <ImageButton
-                android:id="@+id/add_hat_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:contentDescription="@string/hat_button_description"
-                android:scaleType="centerInside"
-                android:src="@drawable/cap"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+        <ImageButton
+            android:id="@+id/add_pants_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/add_jacket_button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/jacket_button_description"
-                android:scaleType="centerInside"
-                android:src="@drawable/nylon_jacket"/>
-
-        </LinearLayout>
+            android:contentDescription="@string/pants_button_description"
+            android:scaleType="centerInside"
+            android:src="@drawable/pants"
+            android:padding="@dimen/dialog_add_clothing_button_padding"/>
 
     </LinearLayout>
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/add_shoe_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/shoe_button_description"
+            android:scaleType="centerInside"
+            android:src="@drawable/sneaker"
+            android:padding="@dimen/dialog_add_clothing_button_padding"/>
+
+        <ImageButton
+            android:id="@+id/add_dress_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/dress_button_description"
+            android:scaleType="centerInside"
+            android:src="@drawable/dress"
+            android:padding="@dimen/dialog_add_clothing_button_padding"/>
+
+        <ImageButton
+            android:id="@+id/add_hat_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/hat_button_description"
+            android:scaleType="centerInside"
+            android:src="@drawable/cap"
+            android:padding="@dimen/dialog_add_clothing_button_padding"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/add_jacket_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/jacket_button_description"
+            android:scaleType="centerInside"
+            android:src="@drawable/nylon_jacket"
+            android:padding="@dimen/dialog_add_clothing_button_padding"/>
+
+    </LinearLayout>
+
+</LinearLayout>

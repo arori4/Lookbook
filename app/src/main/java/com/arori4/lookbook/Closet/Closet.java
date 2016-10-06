@@ -25,7 +25,7 @@ public class Closet {
      * @param pref
      * @return
      */
-    public List<Clothing> filter(PreferenceList pref){
+    public List<Clothing> filter(ClosetQuery pref){
         List<Clothing> filtered_clothes = new ArrayList<Clothing>();
         List<Clothing> temp_clothes = new ArrayList<Clothing>();
 

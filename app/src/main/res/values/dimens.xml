@@ -15,4 +15,5 @@
     <dimen name="home_text_padding">10dp</dimen>
     <dimen name="home_image_padding">10dp</dimen>
     <dimen name="home_text_size">22sp</dimen>
+    <dimen name="dialog_add_clothing_button_padding">16dp</dimen>
 </resources>

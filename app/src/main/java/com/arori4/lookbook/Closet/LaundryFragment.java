@@ -64,7 +64,7 @@ public class LaundryFragment extends Fragment {
     private void updateGridLayout(){
 
         //Get the correct list
-        mLaundryList = mCurrentCloset.filter(new PreferenceList(true, null, null, null, null, null, null, null));
+        mLaundryList = mCurrentCloset.filter(new ClosetQuery(true, null, null, null, null, null, null, null));
         GridImageAdapter laundryGridViewAdapter = new GridImageAdapter(mContext, mLaundryList);
         GridView laundryGridView = (GridView) mCurrentView.findViewById(R.id.laundry_grid_view);
 

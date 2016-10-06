@@ -6,15 +6,14 @@ import java.util.List;
 
 /**
  * Created by Christopher Cabreros on 05-May-16.
+ * Defines a closet query
  */
-public class PreferenceList implements Serializable {
+public class ClosetQuery implements Serializable {
 
     public static final String EXTRA_STRING = "PreferenceList181881";
 
     private Boolean mWorn;
-
     private String mCategory;
-
     private String mColor;
     private String mSecondaryColor;
     private String mSize;
@@ -22,8 +21,22 @@ public class PreferenceList implements Serializable {
     private String mStyle;
     private String mWeather;
 
+    //Defined quick use constants
+    public static final ClosetQuery ACCESSORY = new ClosetQuery(false, Clothing.ACCESSORY,
+            null, null, null, null, null, null);
+    public static final ClosetQuery TOP = new ClosetQuery(false, Clothing.TOP,
+            null, null, null, null, null, null);
+    public static final ClosetQuery BOTTOM = new ClosetQuery(false, Clothing.BOTTOM,
+            null, null, null, null, null, null);
+    public static final ClosetQuery BODY = new ClosetQuery(false, Clothing.BODY,
+            null, null, null, null, null, null);
+    public static final ClosetQuery JACKET = new ClosetQuery(false, Clothing.JACKET,
+            null, null, null, null, null, null);
+    //TODO enumerate the rest
+
+
     /* No argument constructor */
-    public PreferenceList() {
+    public ClosetQuery() {
         this.mWorn = false;
         this.mCategory = null;
         this.mColor = null;
@@ -34,7 +47,8 @@ public class PreferenceList implements Serializable {
         this.mSecondaryColor = null;
     }
 
-    public PreferenceList(Boolean mWorn, String mCategory, String mColor, String mSize, List<String> mOccasion, String mStyle, String mWeather, String mSecondaryColor) {
+    public ClosetQuery(Boolean mWorn, String mCategory, String mColor, String mSize,
+                       List<String> mOccasion, String mStyle, String mWeather, String mSecondaryColor) {
         this();
         this.mWorn = mWorn;
         this.mCategory = mCategory;
@@ -46,12 +60,13 @@ public class PreferenceList implements Serializable {
         this.mSecondaryColor = mSecondaryColor;
     }
 
-    public PreferenceList(boolean mWorn, String mCategory, String mColor, String mSize, List<String> mOccasion, String mStyle, String mWeather, String mSecondaryColor) {
+    public ClosetQuery(boolean mWorn, String mCategory, String mColor, String mSize,
+                       List<String> mOccasion, String mStyle, String mWeather, String mSecondaryColor) {
         this(Boolean.valueOf(mWorn), mCategory, mColor, mSize, mOccasion, mStyle, mWeather, mSecondaryColor);
     }
 
     /* Copy Constructor */
-    public PreferenceList(PreferenceList pref) {
+    public ClosetQuery(ClosetQuery pref) {
         this.mWorn = pref.mWorn;
         this.mCategory = pref.mCategory;
         this.mColor = pref.mColor;
@@ -63,7 +78,7 @@ public class PreferenceList implements Serializable {
     }
 
     /* Constructor that modifies one preference */
-    public PreferenceList(PreferenceList pref, String attributeType, Object attribute) {
+    public ClosetQuery(ClosetQuery pref, String attributeType, Object attribute) {
         this(pref);
         System.out.println("PL mod worn " + mWorn);
         System.out.println("attribute " + attribute + " attriType " + attributeType);
@@ -93,7 +108,7 @@ public class PreferenceList implements Serializable {
         }
     }
 
-    public PreferenceList(Clothing clothing) {
+    public ClosetQuery(Clothing clothing) {
         this();
 
         if (clothing != null) {

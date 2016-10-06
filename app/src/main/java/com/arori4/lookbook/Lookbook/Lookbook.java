@@ -1,8 +1,8 @@
 package com.arori4.lookbook.Lookbook;
 
 import com.arori4.lookbook.Closet.Closet;
+import com.arori4.lookbook.Closet.ClosetQuery;
 import com.arori4.lookbook.Closet.Clothing;
-import com.arori4.lookbook.Closet.PreferenceList;
 import com.arori4.lookbook.YahooClient;
 
 import java.util.ArrayList;
@@ -55,11 +55,11 @@ public class Lookbook {
     }
 
     /*
-     * Takes in the PreferenceList and chooses an outfit accordingly.
-     * @param preferenceList
+     * Takes in the ClosetQuery and chooses an outfit accordingly.
+     * @param closetQuery
      * @return Outfit
      */
-    public Outfit generateOutfit(PreferenceList preferenceList) {
+    public Outfit generateOutfit(ClosetQuery closetQuery) {
 
 		Clothing jacket = null;
         Clothing shirt = null;
@@ -73,21 +73,21 @@ public class Lookbook {
         Outfit result = new Outfit();
 
         /* PrefList with top */
-        PreferenceList shirtPref = new PreferenceList(
-                preferenceList, cat, Clothing.TOP);
+        ClosetQuery shirtPref = new ClosetQuery(
+                closetQuery, cat, Clothing.TOP);
 
         /* Get a shirt */
         shirt = pickOne(shirtPref);
 
 		/* Pants should match the shirt */
-        PreferenceList pantsPref = new PreferenceList(shirt);
-        pantsPref = new PreferenceList(pantsPref, cat, Clothing.BOTTOM);
+        ClosetQuery pantsPref = new ClosetQuery(shirt);
+        pantsPref = new ClosetQuery(pantsPref, cat, Clothing.BOTTOM);
 
         /* Get pants */
         pants = pickOne(pantsPref);
 
         /* Get shoes */
-        PreferenceList shoesPref = new PreferenceList(shirtPref,
+        ClosetQuery shoesPref = new ClosetQuery(shirtPref,
                 cat, Clothing.SHOE);
         shoes = pickOne(shoesPref);
 
@@ -95,8 +95,8 @@ public class Lookbook {
         Random randHat = new Random();
         int iHat = randHat.nextInt(5);
         if (iHat == 0) {
-            PreferenceList hatPref = new PreferenceList(shirt);
-            hatPref = new PreferenceList(hatPref, cat, Clothing.HAT);
+            ClosetQuery hatPref = new ClosetQuery(shirt);
+            hatPref = new ClosetQuery(hatPref, cat, Clothing.HAT);
             hat = pickOne(hatPref);
         }
 
@@ -107,8 +107,8 @@ public class Lookbook {
 			iJac = randJac.nextInt(2);
 		}
         if (iHat == 0) {
-            PreferenceList jacPref = new PreferenceList(shirt);
-            jacPref = new PreferenceList(jacPref, cat, Clothing.JACKET);
+            ClosetQuery jacPref = new ClosetQuery(shirt);
+            jacPref = new ClosetQuery(jacPref, cat, Clothing.JACKET);
             jacket = pickOne(jacPref);
         }
 
@@ -235,10 +235,10 @@ public class Lookbook {
 	 * multiple times.
 	 * Current fields used in filter: Color, SecondaryColor, Occasion, Weather,
 	 * Worn.
-     * @param PreferenceList
+     * @param ClosetQuery
      * @return Clothing
      */
-    private Clothing pickOne(PreferenceList prefList) {
+    private Clothing pickOne(ClosetQuery prefList) {
 
         List<Clothing> match = null;
 
@@ -267,7 +267,7 @@ public class Lookbook {
         }
 
         /* Create a new preference list with this color */
-        PreferenceList first = new PreferenceList(prefList, attriColor, color);
+        ClosetQuery first = new ClosetQuery(prefList, attriColor, color);
 
         /* Do we need to get current weather information */
         if (weather == null) {
@@ -288,7 +288,7 @@ public class Lookbook {
 		/* Next filter */
         if (match == null) {
             /* If color is set, then consider color first */
-            PreferenceList third = new PreferenceList(first,
+            ClosetQuery third = new ClosetQuery(first,
                     attriWeather, null);
             /* Delete lowest priority weather field */
             if (mBelongingCloset != null) {
@@ -297,13 +297,13 @@ public class Lookbook {
 
 
             /* Delete occasion field */
-            PreferenceList fifth = new PreferenceList(third, attriOcca, null);
+            ClosetQuery fifth = new ClosetQuery(third, attriOcca, null);
             if (match == null) {
                 match = mBelongingCloset.filter(fifth);
             }
 
 			/* If color is not set, occasion is primary and weather follows */
-            PreferenceList seventh = new PreferenceList(fifth, attriColor, null);
+            ClosetQuery seventh = new ClosetQuery(fifth, attriColor, null);
             if (match == null) {
                 match = mBelongingCloset.filter(seventh);
             }
@@ -342,7 +342,7 @@ public class Lookbook {
 
         //accessories
         if (random.nextInt(4) == 0) {
-            PreferenceList accessoryPref = new PreferenceList
+            ClosetQuery accessoryPref = new ClosetQuery
                     (false, Clothing.ACCESSORY, null, null, null, null, null, null);
             List<Clothing> accessoryList = mBelongingCloset.filter(accessoryPref);
             if (!accessoryList.isEmpty()) { //nullptr check
@@ -352,7 +352,7 @@ public class Lookbook {
         }
 
         //top
-        PreferenceList topPref = new PreferenceList
+        ClosetQuery topPref = new ClosetQuery
                 (false, Clothing.TOP, null, null, null, null, null, null);
         List<Clothing> topList = mBelongingCloset.filter(topPref);
         if (!topList.isEmpty()) { //nullptr check
@@ -361,7 +361,7 @@ public class Lookbook {
         }
 
         //bottom
-        PreferenceList pantsPref = new PreferenceList
+        ClosetQuery pantsPref = new ClosetQuery
                 (false, Clothing.BOTTOM, null, null, null, null, null, null);
         ;
         List<Clothing> bottomList = mBelongingCloset.filter(pantsPref);
@@ -371,7 +371,7 @@ public class Lookbook {
         }
 
         //shoes
-        PreferenceList shoesPref = new PreferenceList
+        ClosetQuery shoesPref = new ClosetQuery
                 (false, Clothing.SHOE, null, null, null, null, null, null);
         ;
         List<Clothing> shoesList = mBelongingCloset.filter(shoesPref);
@@ -382,7 +382,7 @@ public class Lookbook {
 
         //hat
         if (random.nextInt(4) == 0) {
-            PreferenceList hatPref = new PreferenceList
+            ClosetQuery hatPref = new ClosetQuery
                     (false, Clothing.HAT, null, null, null, null, null, null);
             ;
             List<Clothing> hatList = mBelongingCloset.filter(hatPref);
@@ -395,7 +395,7 @@ public class Lookbook {
         return result;
     }
 
-    private List<Clothing> filter(PreferenceList topPref) {
+    private List<Clothing> filter(ClosetQuery topPref) {
         return new ArrayList<>();
     }
 

@@ -197,19 +197,19 @@ public class ClosetFragment extends Fragment {
 
         //Clear the lists and refill them
         accessoryList.clear();
-        accessoryList = mCurrentCloset.filter(new PreferenceList(false, Clothing.ACCESSORY, null, null, null, null, null, null));
+        accessoryList = mCurrentCloset.filter(new ClosetQuery(false, Clothing.ACCESSORY, null, null, null, null, null, null));
         topList.clear();
-        topList = mCurrentCloset.filter(new PreferenceList(false, Clothing.TOP, null, null, null, null, null, null));
+        topList = mCurrentCloset.filter(new ClosetQuery(false, Clothing.TOP, null, null, null, null, null, null));
         bottomList.clear();
-        bottomList = mCurrentCloset.filter(new PreferenceList(false, Clothing.BOTTOM, null, null, null, null, null, null));
+        bottomList = mCurrentCloset.filter(new ClosetQuery(false, Clothing.BOTTOM, null, null, null, null, null, null));
         shoeList.clear();
-        shoeList = mCurrentCloset.filter(new PreferenceList(false, Clothing.SHOE, null, null, null, null, null, null));
+        shoeList = mCurrentCloset.filter(new ClosetQuery(false, Clothing.SHOE, null, null, null, null, null, null));
         bodyList.clear();
-        bodyList = mCurrentCloset.filter(new PreferenceList(false, Clothing.BODY, null, null, null, null, null, null));
+        bodyList = mCurrentCloset.filter(new ClosetQuery(false, Clothing.BODY, null, null, null, null, null, null));
         hatList.clear();
-        hatList = mCurrentCloset.filter(new PreferenceList(false, Clothing.HAT, null, null, null, null, null, null));
+        hatList = mCurrentCloset.filter(new ClosetQuery(false, Clothing.HAT, null, null, null, null, null, null));
         jacketList.clear();
-        jacketList = mCurrentCloset.filter(new PreferenceList(false, Clothing.JACKET, null, null, null, null, null, null));
+        jacketList = mCurrentCloset.filter(new ClosetQuery(false, Clothing.JACKET, null, null, null, null, null, null));
 
         //Add all of these lists into a single list of lists, if it is a size large enough
         listOfLists.clear();
@@ -294,52 +294,52 @@ public class ClosetFragment extends Fragment {
             LinearLayout categoryLeftBox = (LinearLayout) categoryView.findViewById(R.id.closet_category_left_layout);
             ImageView categoryViewImage = (ImageView) categoryView.findViewById(R.id.closet_category_picture);
             TextView categoryTextView = (TextView) categoryView.findViewById(R.id.closet_category_text);
-            PreferenceList categoryPreferenceList = null;
+            ClosetQuery categoryClosetQuery = null;
 
             //Set the picture and the text for the fragment_closet Category
             if (!currentList.isEmpty() && currentList.get(0).getCategory().equals(Clothing.HAT)) {
                 categoryViewImage.setImageResource(R.drawable.cap);
                 categoryTextView.setText("Hat");
-                categoryPreferenceList = new PreferenceList(false, Clothing.HAT, null, null, null, null, null, null);
+                categoryClosetQuery = new ClosetQuery(false, Clothing.HAT, null, null, null, null, null, null);
             } else if (!currentList.isEmpty() && currentList.get(0).getCategory().equals(Clothing.ACCESSORY)) {
                 //set image to accessory
                 categoryViewImage.setImageResource(R.drawable.accessory);
                 categoryTextView.setText("Accessory");
-                categoryPreferenceList = new PreferenceList(false, Clothing.ACCESSORY, null, null, null, null, null, null);
+                categoryClosetQuery = new ClosetQuery(false, Clothing.ACCESSORY, null, null, null, null, null, null);
             } else if (!currentList.isEmpty() && currentList.get(0).getCategory().equals(Clothing.BODY)) {
                 //set image to body
                 categoryViewImage.setImageResource(R.drawable.dress);
                 categoryTextView.setText("Body");
-                categoryPreferenceList = new PreferenceList(false, Clothing.BODY, null, null, null, null, null, null);
+                categoryClosetQuery = new ClosetQuery(false, Clothing.BODY, null, null, null, null, null, null);
             } else if (!currentList.isEmpty() && currentList.get(0).getCategory().equals(Clothing.BOTTOM)) {
                 //set image to bottom
                 categoryViewImage.setImageResource(R.drawable.bag_pants);
                 categoryTextView.setText("Bottom");
-                categoryPreferenceList = new PreferenceList(false, Clothing.BOTTOM, null, null, null, null, null, null);
+                categoryClosetQuery = new ClosetQuery(false, Clothing.BOTTOM, null, null, null, null, null, null);
             } else if (!currentList.isEmpty() && currentList.get(0).getCategory().equals(Clothing.JACKET)) {
                 //set image to jacket
                 categoryViewImage.setImageResource(R.drawable.nylon_jacket);
                 categoryTextView.setText("Jacket");
-                categoryPreferenceList = new PreferenceList(false, Clothing.JACKET, null, null, null, null, null, null);
+                categoryClosetQuery = new ClosetQuery(false, Clothing.JACKET, null, null, null, null, null, null);
             } else if (!currentList.isEmpty() && currentList.get(0).getCategory().equals(Clothing.SHOE)) {
                 //set image to shoes
                 categoryViewImage.setImageResource(R.drawable.sneaker);
                 categoryTextView.setText("Shoes");
-                categoryPreferenceList = new PreferenceList(false, Clothing.SHOE, null, null, null, null, null, null);
+                categoryClosetQuery = new ClosetQuery(false, Clothing.SHOE, null, null, null, null, null, null);
             } else if (!currentList.isEmpty() && currentList.get(0).getCategory().equals(Clothing.TOP)) {
                 //set image to top
                 categoryViewImage.setImageResource(R.drawable.top);
                 categoryTextView.setText("Top");
-                categoryPreferenceList = new PreferenceList(false, Clothing.TOP, null, null, null, null, null, null);
+                categoryClosetQuery = new ClosetQuery(false, Clothing.TOP, null, null, null, null, null, null);
             }
-            final PreferenceList clickPreference = categoryPreferenceList;
+            final ClosetQuery clickPreference = categoryClosetQuery;
 
             //Set the pictures to each have an on click listener
             categoryLeftBox.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getContext(), ViewClothingByCatActivity.class);
-                    intent.putExtra(PreferenceList.EXTRA_STRING, clickPreference);
+                    intent.putExtra(ClosetQuery.EXTRA_STRING, clickPreference);
                     intent.putExtra(ViewClothingByCatActivity.CAME_FROM_CLOSET_STRING, true);
                     startActivity(intent);
                 }

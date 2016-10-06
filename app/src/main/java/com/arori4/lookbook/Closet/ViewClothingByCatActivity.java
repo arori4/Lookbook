@@ -63,13 +63,13 @@ public class ViewClothingByCatActivity extends OldBaseActivity {
         mCameFromCloset = previousIntent.getBooleanExtra(CAME_FROM_CLOSET_STRING, true);
 
         //Get the extra preference
-        PreferenceList getPreference;
+        ClosetQuery getPreference;
         //Check if it actually exists
-        if (previousIntent.hasExtra(PreferenceList.EXTRA_STRING)) {
-            getPreference = (PreferenceList) previousIntent.
-                    getSerializableExtra(PreferenceList.EXTRA_STRING);
+        if (previousIntent.hasExtra(ClosetQuery.EXTRA_STRING)) {
+            getPreference = (ClosetQuery) previousIntent.
+                    getSerializableExtra(ClosetQuery.EXTRA_STRING);
         } else {
-            getPreference = new PreferenceList(false, null, null, null, null, null, null, null);
+            getPreference = new ClosetQuery(false, null, null, null, null, null, null, null);
         }
         ;
 
