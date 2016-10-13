@@ -15,5 +15,8 @@
     <dimen name="home_text_padding">10dp</dimen>
     <dimen name="home_image_padding">10dp</dimen>
     <dimen name="home_text_size">22sp</dimen>
-    <dimen name="dialog_add_clothing_button_padding">16dp</dimen>
+    <dimen name="dialog_add_clothing_button_padding">8dp</dimen>
+    <dimen name="dialog_add_clothing_button_height">75dp</dimen>
+    <dimen name="activity_add_clothing_field_padding">16dp</dimen>
+    <dimen name="activity_add_clothing_field_text_size">24sp</dimen>
 </resources>

@@ -1,107 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:weightSum="3"
-    tools:context=".Closet.ClosetFragment">
 
-    <LinearLayout
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:alignmentMode="alignMargins"
+    android:background="@color/background_material_light_closet">
+
+    <TableRow
+        android:id="@+id/tableRow0"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:padding="5dip"
+        android:layout_weight="0.5"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/add_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_clothing_type"
+            android:layout_gravity="center"/>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="5dip"
+        android:layout_weight="1">
 
         <ImageButton
             android:id="@+id/add_accessory_button"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="@dimen/dialog_add_clothing_button_height"
             android:contentDescription="@string/accessory_button_description"
+            android:padding="@dimen/dialog_add_clothing_button_padding"
             android:scaleType="centerInside"
             android:src="@drawable/accessory"
-            android:padding="@dimen/dialog_add_clothing_button_padding"/>
+            android:layout_weight="1"/>
 
         <ImageButton
             android:id="@+id/add_shirt_button"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="@dimen/dialog_add_clothing_button_height"
             android:contentDescription="@string/shirt_button_description"
+            android:padding="@dimen/dialog_add_clothing_button_padding"
             android:scaleType="centerInside"
             android:src="@drawable/top"
-            android:padding="@dimen/dialog_add_clothing_button_padding"/>
+            android:layout_weight="1"/>
 
         <ImageButton
             android:id="@+id/add_pants_button"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="@dimen/dialog_add_clothing_button_height"
             android:contentDescription="@string/pants_button_description"
+            android:padding="@dimen/dialog_add_clothing_button_padding"
             android:scaleType="centerInside"
-            android:src="@drawable/pants"
-            android:padding="@dimen/dialog_add_clothing_button_padding"/>
+            android:src="@drawable/bag_pants"
+            android:layout_weight="1"/>
 
-    </LinearLayout>
+    </TableRow>
 
-    <LinearLayout
+    <TableRow
+        android:id="@+id/tableRow2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:padding="5dip"
+        android:layout_weight="1">
 
         <ImageButton
             android:id="@+id/add_shoe_button"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="@dimen/dialog_add_clothing_button_height"
             android:contentDescription="@string/shoe_button_description"
+            android:padding="@dimen/dialog_add_clothing_button_padding"
             android:scaleType="centerInside"
             android:src="@drawable/sneaker"
-            android:padding="@dimen/dialog_add_clothing_button_padding"/>
+            android:layout_weight="1"/>
 
         <ImageButton
             android:id="@+id/add_dress_button"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="@dimen/dialog_add_clothing_button_height"
             android:contentDescription="@string/dress_button_description"
+            android:padding="@dimen/dialog_add_clothing_button_padding"
             android:scaleType="centerInside"
             android:src="@drawable/dress"
-            android:padding="@dimen/dialog_add_clothing_button_padding"/>
+            android:layout_weight="1"/>
 
         <ImageButton
             android:id="@+id/add_hat_button"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="@dimen/dialog_add_clothing_button_height"
             android:contentDescription="@string/hat_button_description"
+            android:padding="@dimen/dialog_add_clothing_button_padding"
             android:scaleType="centerInside"
             android:src="@drawable/cap"
-            android:padding="@dimen/dialog_add_clothing_button_padding"/>
+            android:layout_weight="1"/>
 
-    </LinearLayout>
+    </TableRow>
 
-    <LinearLayout
+    <TableRow
+        android:id="@+id/tableRow3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:padding="5dip">
 
         <ImageButton
             android:id="@+id/add_jacket_button"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="@dimen/dialog_add_clothing_button_height"
             android:contentDescription="@string/jacket_button_description"
+            android:padding="@dimen/dialog_add_clothing_button_padding"
             android:scaleType="centerInside"
             android:src="@drawable/nylon_jacket"
-            android:padding="@dimen/dialog_add_clothing_button_padding"/>
+            android:layout_weight="1"/>
+    </TableRow>
 
-    </LinearLayout>
-
-</LinearLayout>
+</TableLayout>

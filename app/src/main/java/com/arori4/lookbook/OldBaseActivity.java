@@ -72,15 +72,6 @@ public abstract class OldBaseActivity extends AppCompatActivity {
             case "App Theme":
                 setTheme(R.style.AppTheme);
                 break;
-            case "Eco":
-                setTheme(R.style.EcoTheme);
-                break;
-            case "Dynamic":
-                setTheme(R.style.DynamicTheme);
-                break;
-            case "Monochrome":
-                setTheme(R.style.MonochromeTheme);
-                break;
             default:
                 break;
 

@@ -1,8 +1,6 @@
 package com.arori4.lookbook;
 
-import android.app.Application;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -41,7 +39,7 @@ public class BaseActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_base);
         mTitles = new CharSequence[]{ //these are all the tabs
                 getString(R.string.home),
                 getString(R.string.closet),
@@ -52,7 +50,7 @@ public class BaseActivity extends AppCompatActivity {
 
         //Setup the pager and the adapter
         HomePagerAdapter homePagerAdapter = new HomePagerAdapter(getSupportFragmentManager(), mTitles);
-        mViewPager = (ViewPager) findViewById(R.id.home_pager);
+        mViewPager = (ViewPager) findViewById(R.id.activity_base_pager);
         if (mViewPager != null) {
             mViewPager.setAdapter(homePagerAdapter);
         } else{
@@ -60,7 +58,7 @@ public class BaseActivity extends AppCompatActivity {
         }
 
         //Setup tab layout
-        mTabLayout = (TabLayout) findViewById(R.id.home_tabs);
+        mTabLayout = (TabLayout) findViewById(R.id.activity_base_tabs);
         if (mTabLayout != null) {
             mTabLayout.setupWithViewPager(mViewPager);
         } else{
@@ -68,7 +66,7 @@ public class BaseActivity extends AppCompatActivity {
         }
 
         //Setup toolbar
-        Toolbar homeToolbar = (Toolbar) findViewById(R.id.activity_home_toolbar);
+        Toolbar homeToolbar = (Toolbar) findViewById(R.id.activity_base_toolbar);
         if (homeToolbar != null) {
             setSupportActionBar(homeToolbar);
         } else{
@@ -98,14 +96,14 @@ public class BaseActivity extends AppCompatActivity {
          * @param fm     - fragment manager from parent activity
          * @param titles - a sequence of titles.
          */
-        public HomePagerAdapter(FragmentManager fm, CharSequence[] titles) {
+        HomePagerAdapter(FragmentManager fm, CharSequence[] titles) {
 
             super(fm);
 
             mTitles = titles;
             mNumTabs = titles.length;
 
-            if (titles.length <= 2) {
+            if (titles.length <= 4) {
                 throw new IllegalArgumentException("Titles does not have enough titles");
             }
         }
@@ -174,7 +172,7 @@ public class BaseActivity extends AppCompatActivity {
         //leave app if backButton was pressed twice
         if (!mBackButtonPressed) {
             mBackButtonPressed = true;
-            Toast newToast = Toast.makeText(this, "Press the back button again to leave.",
+            Toast newToast = Toast.makeText(this, R.string.home_back_button_leave,
                     Toast.LENGTH_SHORT);
             newToast.show();
         } else {

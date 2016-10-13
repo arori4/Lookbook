@@ -35,7 +35,7 @@
             android:padding="@dimen/abc_action_bar_content_inset_material"
             android:text="@string/app_name"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/secondary_text_light"
+            android:textColor="@color/black"
             android:textIsSelectable="false"
             android:textSize="@dimen/abc_text_size_display_2_material"
             android:typeface="monospace"/>

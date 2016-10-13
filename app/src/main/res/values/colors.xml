@@ -20,10 +20,11 @@
     <color name="pink">#ffecee</color>
     <color name="darkerblue">#cbe6fb</color>
     <color name="blue">#cbf3f2</color>
-    <color name="yellow">#f0e38d</color>
+    <color name="yellow">#be0000</color>
+    <color name="black">#000000</color>
 
     <color name="ecoButtons">#aca29a</color>
     <color name="dynamicButtons">#ece8e4</color>
-    <color name="monochromeButtons">#ece0cd</color>
+    <color name="monochromeButtons">#795548</color>
     <color name="watermelon_pink">#fbcdcf</color>
 </resources>
