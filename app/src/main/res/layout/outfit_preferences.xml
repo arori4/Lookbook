@@ -15,7 +15,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="?color2"
             android:orientation="horizontal">
 
             <!--color icon set-->
@@ -24,7 +23,6 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="?color1"
                 android:orientation="vertical"
                 android:padding="3dp"
                 android:visibility="visible">
@@ -62,7 +60,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="?color2"
             android:orientation="horizontal">
 
             <!--weather icon set-->
@@ -71,7 +68,6 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="?color1"
                 android:orientation="vertical"
                 android:padding="3dp"
                 android:visibility="visible">
@@ -109,7 +105,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="?color2"
             android:orientation="horizontal">
 
             <!--occasion icon set-->
@@ -118,7 +113,6 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="?color1"
                 android:orientation="vertical"
                 android:padding="3dp"
                 android:visibility="visible">

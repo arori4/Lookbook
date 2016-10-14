@@ -11,7 +11,7 @@
     </style>
 
     <style name="DefaultCloset" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@android:color/secondary_text_dark</item>
+        <item name="colorPrimary">#CCCCCC</item>
         <item name="colorAccent">@color/yellow</item>
     </style>
 

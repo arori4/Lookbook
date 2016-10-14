@@ -19,7 +19,6 @@
         android:padding="5dp">
 
         <LinearLayout
-            style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -27,38 +26,32 @@
 
             <Button
                 android:id="@+id/generation"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="chooseAttributes"
                 android:text="@string/generate_outfit_text"
-                android:background="?color1"
                 android:textColor="#000000"
                 android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/lastButton"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="generateOutfit"
                 android:text="@string/im_feeling_lucky_text"
-                android:background="?color2"
                 android:textColor="#000000"
                 android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/doneButton"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
                 android:layout_weight="1"
                 android:onClick="pressSaveOutfit"
                 android:text="@string/save_outfit_text"
-                android:background="?color4"
                 android:textColor="#000000"
                 android:textStyle="bold"/>
 

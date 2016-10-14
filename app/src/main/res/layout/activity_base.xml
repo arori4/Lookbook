@@ -12,6 +12,7 @@
         android:id="@+id/activity_base_toolbar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
         style="@style/ToolBarStyle"/>
